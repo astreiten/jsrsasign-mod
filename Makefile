@@ -57,19 +57,6 @@ JSDOCOUTDIR1=_tmp
 
 APIDOCDIR=api
 
-jsdoc:
-	rm -rf $(APIDOCDIR)
-	mkdir $(APIDOCDIR)
-	( \
-	cd src; \
-	${JSRUN} $(JSDOC_SRC) \
-	-d=../$(APIDOCDIR) -v \
-	)
-	mv $(APIDOCDIR)/symbols/_global_.html $(APIDOCDIR)/symbols/global__.html
-	find $(APIDOCDIR) -type f -name "*.html" -print0 | xargs -0 sed -i.bak -e "s/_global_/global__/g"
-	find $(APIDOCDIR) -type f -name "*.html" -print0 | xargs -0 sed -i.bak -e "s/2012-2020/2012-2021/g"
-	find $(APIDOCDIR) -type f -name "*.html.bak" -exec rm {} \;
-
 all-min: $(FILES_MIN)
 	@echo "all min converted."
 
@@ -82,11 +69,8 @@ min/%.min.js: src/%.js
 ext/%-min.js: ext/%.js
 	yuicmp $^ -o $@
 
-gitadd-all-doc:
-	git add api/*.html api/symbols/*.html api/symbols/src/*.html LICENSE.txt
-
 gitadd-release:
 	git add ChangeLog.txt Makefile bower.json jsrsasign-*-min.js min/*.js src/*.js npm/package.json npm/lib/jsrsasign*.js npm/lib/{header,footer,lib}.js src/*.js test/qunit-do-*.html test/x509crl.html README.md npm/README.md tool/*.html npm_util/*.* npm_util/lib/*.* npm/test/t_*.js
 
-gitadd: gitadd-all-doc gitadd-release
+gitadd: gitadd-release
 	@echo done
