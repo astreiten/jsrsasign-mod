@@ -822,7 +822,6 @@ KJUR.asn1.tsp.SimpleTSAAdapter = function(params) {
 
     if (params !== undefined) this.params = params;
 };
-                  KJUR.asn1.tsp.AbstractTSAAdapter);
 
 /**
  * class for fixed TimeStampToken generator (DEPRECATED)<br/>
@@ -866,7 +865,6 @@ KJUR.asn1.tsp.FixedTSAAdapter = function(params) {
 
     if (params !== undefined) this.params = params;
 };
-                  KJUR.asn1.tsp.AbstractTSAAdapter);
 
 // --- TSP utilities -------------------------------------------------
 
