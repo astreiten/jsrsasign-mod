@@ -69,6 +69,22 @@ min/%.min.js: src/%.js
 ext/%-min.js: ext/%.js
 	yui-compressor $^ -o $@
 
+all: join-main
+
+join-minify: *min.js ext/*min.js npm/lib/header.js npm/lib/footer.js
+	cat *min.js $(shell find ext/ -name "*min.js") | sed "s/\/*! /\n\/*! /g" > jsrsasign-4.9.0-mdcone-all-min.js
+	cp jsrsasign-4.9.0-mdcone-all-min.js jsrsasign-latest-all-min.js
+
+#min-js: *.js
+#	for i in `ls *.js | grep -v "min.js"` ; do java -jar ~/src/yuicompressor/build/yuicompressor-2.4.8.jar $i -o `echo $i | sed 's/.js/-min.js/g'` ; done
+
+join-main: join-minify
+	cat \
+        npm/lib/header.js \
+        jsrsasign-latest-all-min.js \
+        npm/lib/footer.js \
+        > npm/lib/jsrsasign.js
+
 gitadd-release:
 	git add ChangeLog.txt Makefile bower.json jsrsasign-*-min.js min/*.js src/*.js npm/package.json npm/lib/jsrsasign*.js npm/lib/{header,footer,lib}.js src/*.js test/qunit-do-*.html test/x509crl.html README.md npm/README.md tool/*.html npm_util/*.* npm_util/lib/*.* npm/test/t_*.js
 
