@@ -64,10 +64,10 @@ all-ext-min: $(FILES_EXT_MIN)
 	@echo "all ext min converted."
 
 min/%.min.js: src/%.js
-	yuicmp $^ -o $@
+	yui-compresso $^ -o $@
 
 ext/%-min.js: ext/%.js
-	yuicmp $^ -o $@
+	yui-compressor $^ -o $@
 
 gitadd-release:
 	git add ChangeLog.txt Makefile bower.json jsrsasign-*-min.js min/*.js src/*.js npm/package.json npm/lib/jsrsasign*.js npm/lib/{header,footer,lib}.js src/*.js test/qunit-do-*.html test/x509crl.html README.md npm/README.md tool/*.html npm_util/*.* npm_util/lib/*.* npm/test/t_*.js
