@@ -250,8 +250,6 @@ KJUR.asn1.cades.SignaturePolicyIdentifier = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.SignaturePolicyIdentifier,
-                  KJUR.asn1.cms.Attribute);
 
 /**
  * RFC 5126 CAdES SignaturePolicyId ASN.1 structure class<br/>
@@ -324,7 +322,6 @@ KJUR.asn1.cades.SignaturePolicyId = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.SignaturePolicyId, KJUR.asn1.ASN1Object);
 
 /**
  * class for OtherHashAlgAndValue ASN.1 object<br/>
@@ -414,7 +411,6 @@ KJUR.asn1.cades.OtherHashAlgAndValue = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.OtherHashAlgAndValue, KJUR.asn1.ASN1Object);
 
 /**
  * class for OtherHashValue ASN.1 object<br/>
@@ -473,7 +469,6 @@ KJUR.asn1.cades.OtherHashValue = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.OtherHashValue, KJUR.asn1.ASN1Object);
 
 /**
  * class for RFC 5126 CAdES SignatureTimeStamp attribute<br/>
@@ -553,8 +548,6 @@ KJUR.asn1.cades.SignatureTimeStamp = function(params) {
 
     if (params != null) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.SignatureTimeStamp,
-                  KJUR.asn1.cms.Attribute);
 
 /**
  * class for RFC 5126 CAdES CompleteCertificateRefs attribute<br/>
@@ -634,8 +627,6 @@ KJUR.asn1.cades.CompleteCertificateRefs = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.CompleteCertificateRefs,
-                  KJUR.asn1.cms.Attribute);
 
 /**
  * class for OtherCertID ASN.1 object
@@ -716,7 +707,6 @@ KJUR.asn1.cades.OtherCertID = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.OtherCertID, KJUR.asn1.ASN1Object);
 
 /**
  * class for OtherHash ASN.1 object<br/>
@@ -785,7 +775,6 @@ KJUR.asn1.cades.OtherHash = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.cades.OtherHash, KJUR.asn1.ASN1Object);
 
 
 // == BEGIN UTILITIES =====================================================

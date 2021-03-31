@@ -142,7 +142,6 @@ KJUR.asn1.tsp.TimeStampToken = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.TimeStampToken, KJUR.asn1.cms.SignedData);
 
 /**
  * class for TSP TSTInfo ASN.1 object
@@ -276,7 +275,6 @@ KJUR.asn1.tsp.TSTInfo = function(params) {
         }
     }
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.TSTInfo, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP Accuracy ASN.1 object
@@ -334,7 +332,6 @@ KJUR.asn1.tsp.Accuracy = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.Accuracy, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP MessageImprint ASN.1 object
@@ -389,7 +386,6 @@ KJUR.asn1.tsp.MessageImprint = function(params) {
 
     if (params !== undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.MessageImprint, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP TimeStampReq ASN.1 object<br/>
@@ -457,7 +453,6 @@ KJUR.asn1.tsp.TimeStampReq = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.TimeStampReq, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP TimeStampResp ASN.1 object
@@ -505,7 +500,6 @@ KJUR.asn1.tsp.TimeStampResp = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.TimeStampResp, KJUR.asn1.ASN1Object);
 
 // --- BEGIN OF RFC 2510 CMP -----------------------------------------------
 
@@ -581,7 +575,6 @@ KJUR.asn1.tsp.PKIStatusInfo = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.PKIStatusInfo, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP PKIStatus ASN.1 object
@@ -647,7 +640,6 @@ KJUR.asn1.tsp.PKIStatus = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.PKIStatus, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP PKIFreeText ASN.1 object
@@ -698,7 +690,6 @@ KJUR.asn1.tsp.PKIFreeText = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.PKIFreeText, KJUR.asn1.ASN1Object);
 
 /**
  * class for TSP PKIFailureInfo ASN.1 object
@@ -767,7 +758,6 @@ KJUR.asn1.tsp.PKIFailureInfo = function(params) {
 
     if (params != undefined) this.setByParam(params);
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.PKIFailureInfo, KJUR.asn1.ASN1Object);
 
 // --- END OF RFC 2510 CMP -------------------------------------------
 
@@ -832,7 +822,6 @@ KJUR.asn1.tsp.SimpleTSAAdapter = function(params) {
 
     if (params !== undefined) this.params = params;
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.SimpleTSAAdapter,
                   KJUR.asn1.tsp.AbstractTSAAdapter);
 
 /**
@@ -877,7 +866,6 @@ KJUR.asn1.tsp.FixedTSAAdapter = function(params) {
 
     if (params !== undefined) this.params = params;
 };
-YAHOO.lang.extend(KJUR.asn1.tsp.FixedTSAAdapter,
                   KJUR.asn1.tsp.AbstractTSAAdapter);
 
 // --- TSP utilities -------------------------------------------------
